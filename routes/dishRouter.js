@@ -15,6 +15,7 @@ dishRouter.route('/')
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         res.json(dishes);
+        console.log(dishes);
       }, (err) => next(err))
       .catch((err) => next(err));
   })
