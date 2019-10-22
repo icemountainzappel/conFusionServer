@@ -37,8 +37,7 @@ exports.jwtPassport = passport.use(new JwtStrategy(opts, (jwt_payload, done) => 
 exports.verifyUser = passport.authenticate('jwt', { session: false });
 
 exports.verifyAdmin = function (req, res, next) {
-  console.log(req.user.admin);
-
+  // console.log(req.user.admin);
   if (req.user.admin) {
     next();
   } else {
